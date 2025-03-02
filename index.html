@@ -1,16 +1,70 @@
-<html>
-    <h1>
-        Hey, I'm Naz
-    </h1>
-
-    <body>
-        <h2>About me</h2>
-        <p>
-            I am coffee addict who Bakes Cookies.
-        </p>
-        <h2>What I'm workin' on</h2>
-        <p>
-            I'm obsessed with AI right now and I'm working on the AWSCloudClub from <a href="https://aws.amazon.com">AWS</a>.
-        </p>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skateboarding Culture</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+            border-radius: 10px;
+        }
+        .skate-image {
+            width: 100%;
+            border-radius: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #ff6600;
+            border: none;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #ff4500;
+        }
+    </style>
+</head>
+<body>
+    <header>Skateboarding Culture</header>
+    <div class="content">
+        <img class="skate-image" src="https://source.unsplash.com/800x400/?skateboarding" alt="Skateboarding">
+        <p>Skateboarding is more than just a sport; it's a lifestyle and an art form. Originating in the 1950s, skateboarding has evolved into a global phenomenon, influencing music, fashion, and street culture.</p>
+        <p>Whether you're cruising down the streets, mastering tricks at the skatepark, or filming creative videos, skateboarding is about freedom and self-expression.</p>
+        <button onclick="showFact()">Fun Skateboarding Fact</button>
+        <p id="fact"></p>
+    </div>
+    <script>
+        function showFact() {
+            const facts = [
+                "Skateboarding was invented in the 1950s by surfers looking for a way to surf on land.",
+                "The first-ever skatepark was built in 1965 in Tucson, Arizona.",
+                "Tony Hawk landed the first documented 900-degree spin in 1999.",
+                "The longest skateboard jump on record is over 25 feet!"
+            ];
+            const randomFact = facts[Math.floor(Math.random() * facts.length)];
+            document.getElementById("fact").textContent = randomFact;
+        }
+    </script>
+</body>
 </html>
